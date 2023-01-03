@@ -1,0 +1,17 @@
+# YAML schema for GitHub Actions:
+# https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions
+#
+# Helpful YAML parser to clarify YAML syntax:
+# https://yaml-online-parser.appspot.com/
+#
+#
+# This file contains the workflows that are run periodically to build the examples.
+
+name: CI
+
+on: push
+
+jobs:
+  build_project:
+    name: Build Project
+    uses: ./.github/workflows/build_workflow.yml
